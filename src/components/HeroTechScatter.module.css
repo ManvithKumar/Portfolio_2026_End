@@ -1,0 +1,30 @@
+.layer {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.scatter {
+  position: absolute;
+  filter: drop-shadow(0 0 14px rgba(168, 85, 247, 0.15));
+}
+
+.native {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .scatter {
+    filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.12));
+  }
+}
+
+@media (max-width: 560px) {
+  .layer {
+    display: none;
+  }
+}

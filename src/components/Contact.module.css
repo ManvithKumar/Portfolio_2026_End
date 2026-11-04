@@ -1,0 +1,129 @@
+.wrap {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.index {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  color: var(--accent);
+  letter-spacing: 0.15em;
+}
+
+.wrap h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 0.35rem 0 0.75rem;
+}
+
+.lead {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.email {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  margin-bottom: 2.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text-bright);
+  font-size: 1.05rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.email:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 40px rgba(168, 85, 247, 0.2);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  text-align: left;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--text-bright);
+  font: inherit;
+  resize: vertical;
+  transition: border-color 0.2s;
+}
+
+.form input:focus,
+.form textarea:focus {
+  outline: none;
+  border-color: var(--accent-secondary);
+}
+
+.form button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9rem 1.25rem;
+  background: linear-gradient(135deg, var(--accent), var(--accent-secondary));
+  color: #000000;
+  font-weight: 600;
+  border-radius: 12px;
+  transition: filter 0.2s;
+}
+
+.form button:hover:not(:disabled) {
+  filter: brightness(1.1);
+}
+
+.form button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.spin {
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.formSuccess,
+.formError {
+  margin: 0.25rem 0 0;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.formSuccess {
+  color: var(--accent-secondary);
+}
+
+.formError {
+  color: #f87171;
+}
+
+.footer {
+  margin-top: auto;
+  padding-top: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}

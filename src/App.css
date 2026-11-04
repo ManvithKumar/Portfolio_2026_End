@@ -1,0 +1,13 @@
+.app {
+  position: relative;
+}
+
+.app main {
+  display: flex;
+  flex-direction: column;
+}
+
+.app main > section,
+.app main > * > section {
+  scroll-margin-top: var(--nav-height);
+}

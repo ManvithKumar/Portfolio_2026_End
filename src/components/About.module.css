@@ -1,0 +1,70 @@
+.layout {
+  display: grid;
+  grid-template-columns: minmax(120px, 200px) 1fr;
+  gap: clamp(2rem, 6vw, 4rem);
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.label {
+  position: sticky;
+  top: calc(var(--nav-height) + 1rem);
+}
+
+.index {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  color: var(--accent);
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5rem;
+}
+
+.label h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.lead {
+  font-size: clamp(1.25rem, 3vw, 1.65rem);
+  color: var(--text-bright);
+  line-height: 1.45;
+  margin-bottom: 1.5rem;
+}
+
+.text {
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+  max-width: 52ch;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 600px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+.statValue {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 0.25rem;
+}
+
+.statLabel {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}

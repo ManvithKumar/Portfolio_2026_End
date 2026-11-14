@@ -1,5 +1,4 @@
 import { motion, useScroll, useTransform, type MotionStyle } from 'framer-motion'
-import { ExternalLink } from 'lucide-react'
 import { useRef } from 'react'
 import { projects } from '../data/portfolio'
 import { bidirectionalViewport, bidirectionalViewportCards } from '../motion/viewport'
